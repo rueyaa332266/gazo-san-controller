@@ -1,0 +1,7 @@
+domain: k8s.io
+repo: github.com/rueyaa332266/gazo-san-controller
+resources:
+- group: gazosancontroller
+  kind: Report
+  version: v1alpha1
+version: "2"
