@@ -3,5 +3,5 @@ kind: Report
 metadata:
   name: report-sample
 spec:
-  # Add fields here
-  foo: bar
+  baseURL: https://www.google.com/?hl=en
+  compareURL: https://www.google.com/?hl=ja

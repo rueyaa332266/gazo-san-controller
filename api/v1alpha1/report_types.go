@@ -25,11 +25,15 @@ import (
 
 // ReportSpec defines the desired state of Report
 type ReportSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	// +kubebuilder:validation:Required
+	// +kubebuilder:validation:Format:=string
 
-	// Foo is an example field of Report. Edit Report_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	BaseURL string `json:"baseURL"`
+
+	// +kubebuilder:validation:Required
+	// +kubebuilder:validation:Format:=string
+
+	CompareURL string `json:"compareURL"`
 }
 
 // ReportStatus defines the observed state of Report
@@ -39,6 +43,7 @@ type ReportStatus struct {
 }
 
 // +kubebuilder:object:root=true
+// +kubebuilder:subresource:status
 
 // Report is the Schema for the reports API
 type Report struct {
