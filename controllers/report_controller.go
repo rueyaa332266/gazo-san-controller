@@ -102,6 +102,7 @@ func (r *ReportReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
 						Value: compareURL,
 					},
 				},
+				Args: []string{"local-server"},
 			},
 		}
 
